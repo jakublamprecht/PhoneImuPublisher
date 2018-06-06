@@ -1,6 +1,6 @@
 <launch>
     <arg name="output" default="screen"/>
-    <arg name="dataFilePath" default="/home/student/Documents/quaternion.txt"/>
+    <arg name="dataFilePath" default="$(find phone_publisher)/data/quaternion.txt"/>
     <arg name="secs" default="0"/>
     <arg name="nsecs" default="0"/>
     <arg name="bagFile" default="phone_imu"/>
@@ -12,5 +12,5 @@
     </node>
 
     <node pkg="rosbag" type="record" name="phone_recorder" 
-        args="record -O $(find phone_publisher)/$(arg bagFile) /phone/imu"/> 
+        args="record -O $(find phone_publisher)/data/$(arg bagFile) /phone/imu"/> 
 </launch>
