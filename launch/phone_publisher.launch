@@ -1,0 +1,12 @@
+<launch>
+    <arg name="output" default="screen"/>
+    <arg name="dataFilePath" default="/home/student/Documents/quaternion.txt"/>
+    <arg name="secs" default="0"/>
+    <arg name="nsecs" default="0"/>
+
+    <node pkg="phone_publisher" name="phone_publisher" type="phone_publisher" output="$(arg output)">
+        <param name="dataFilePath" type="string" value="$(arg dataFilePath)"/>
+        <param name="secs" type="int" value="$(arg secs)"/>
+        <param name="nsecs" type="int" value="$(arg nsecs)"/>
+    </node>
+</launch>
