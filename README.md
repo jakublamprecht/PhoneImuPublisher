@@ -36,3 +36,9 @@ Problem with phone IMU is that we could not read the data directly through ROS. 
 * **secs** - Seconds of starting timestamp. *Default* - 0
 * **nsecs** - Nanoseconds of starting timestamp. *Default* - 0
 * **bagFile** - name of the bagfile that will be created. *Default* - "phone_imu"
+
+Running launch file with parameters:
+
+```bash
+roslaunch phone_publisher phone_publisher.launch {#paramName}:={#value}
+```
